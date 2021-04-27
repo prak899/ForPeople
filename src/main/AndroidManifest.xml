@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.pm.order">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Order">
+
+        <activity android:name=".Order"/>
+        <activity android:name=".Products"/>
+    </application>
+
+</manifest>

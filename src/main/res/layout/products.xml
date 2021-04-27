@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Products">
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/headerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:fontFamily="@font/calibri"
+        android:padding="8dp"
+        android:text="Hot Item"
+        android:textColor="#000000"
+        android:textSize="23sp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/headerName"
+        tools:listitem="@layout/order_items"
+        android:id="@+id/recycler_view_products"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/empty_image_view"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/empty_view"
+        android:src="@drawable/ic_favorite_white_24dp"/>
+    <TextView
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Awww! snap no data!" />
+    <com.jb.dev.progress_indicator.dotBounceProgressBar
+        android:id="@+id/dotBounce"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:background="@color/colorAccent"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>
